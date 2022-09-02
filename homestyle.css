@@ -64,7 +64,8 @@ p, .quote{
 }
 
 .compimgs{
-  max-width: min(97vw, 1320px);
+  max-width: min(75vw, 1320px);
+  margin: 50px;
   margin: auto;
   margin-top: 2vh;
 }
