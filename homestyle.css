@@ -52,6 +52,10 @@ p, .quote{
     background-color: #1A438B;
 }
 
+.YellowText{
+  color: #ffb703;
+}
+
 .companies{
   height: fit-content;
   padding-bottom: 3em;
