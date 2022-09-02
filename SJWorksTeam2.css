@@ -24,7 +24,7 @@ body {
 
 .yellowBorder {
 
-  margin-top: 1.5em;
+  padding-top: 3em;
   grid-column: 1 / -1;
   text-align: center;
   justify-self: center;
@@ -99,7 +99,7 @@ h6 {
   color: #063a85;
 }
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1450px){
   .info{
       grid-template-columns: repeat(1, 100%);
       grid-template-rows: 80px repeat(6, 460px);
