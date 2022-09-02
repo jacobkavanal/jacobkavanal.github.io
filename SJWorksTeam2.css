@@ -23,6 +23,8 @@ body {
 }
 
 .yellowBorder {
+
+  margin-top: 1.5em;
   grid-column: 1 / -1;
   text-align: center;
   justify-self: center;
