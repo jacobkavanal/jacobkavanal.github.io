@@ -5,6 +5,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .mission {
@@ -46,6 +47,21 @@ p, .quote{
 
 .quote {
     padding-top: 15px;
+}
+
+#slides{
+  width:  fit-content;
+  height: 80%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+
+#slideshow{
+
+  height: fit-content;
+
 }
 
 #aboutUs{
