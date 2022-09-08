@@ -35,6 +35,18 @@
     padding-bottom: 1vh;
 }
 
+.interest{
+
+
+}
+
+.but{
+
+  width: 500px;
+  text-align: center;
+
+}
+
 p, .quote{
     color: #FEF9EF;
     text-align: justify;
@@ -65,7 +77,9 @@ p, .quote{
 }
 
 #aboutUs{
+
     background-color: #1A438B;
+
 }
 
 .YellowText{
