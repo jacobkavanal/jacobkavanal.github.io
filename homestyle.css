@@ -83,6 +83,20 @@ p, .quote{
 
 }
 
+#appbutton{
+
+  margin: auto;
+  margin-top: -2vw;
+
+}
+
+#buttons{
+
+  display: flex;
+  justify-content: center;
+
+}
+
 .YellowText{
   color: #ffb703;
 }

@@ -41,7 +41,6 @@
 
     <h1 id="title">ENTER YOUR INFO</h1>
     <h2>For Young Adults</h2>
-    <h4>*Put N/A in Non Applicable sections*​</h4>
 
         <hr id="line">
 
@@ -58,8 +57,9 @@
             </div>
 
             <div class="col-md-3">
-                <label for="hs" class="form-label">High School</label>
-                <select class="form-control midwidth" id="hs" name="hs" required>
+                <label for="hs" class="form-label">Education</label>
+                <input type="text" class="form-control midwidth" id="hs" name="hs">
+                <!-- <select class="form-control midwidth" id="hs" name="hs" required>
                     <option class="options" value=""></option>
                     <option class="options" value="andrewphill">Andrew P. Hill</option>
                     <option class="options" value="evergreenvalley">Evergreen Valley</option>
@@ -78,10 +78,10 @@
                     <option class="options" value="foothill">Foothill</option>
                     <option class="options" value="pegasus">Pegasus</option>
                     <option class="options" value="phoenix">Phoenix</option>
-                </select>
+                </select> -->
             </div>
 
-            <div class="col-md-1">
+            <!-- <div class="col-md-1">
                 <label for="grade" class="form-label">Grade</label>
                 <select class="form-control numwidth" id="grade" name="grade" required>
                     <option class="options" value=""></option>
@@ -90,19 +90,19 @@
                     <option class="options" value="11">11th</option>
                     <option class="options" value="12">12th</option>
                 </select>
-            </div>
+            </div> -->
 
             <div class="col-md-2">
                 <label for="age" class="form-label">Age (optional)</label>
                 <input type="text" class="form-control midwidth" id="studentid" name="studentid">
             </div>
 
-            <div class="col-md-3">
+            <!-- <div class="col-md-3">
                 <label for="studentid" class="form-label">Student ID (optional)</label>
                 <input type="text" class="form-control midwidth" id="studentid" name="studentid">
-            </div>
+            </div> -->
 
-            <div class="col-md-4">
+            <!-- <div class="col-md-4">
                 <label for="pathway" class="form-label">What Career Pathway are you in?</label>
                 <input type="text" class="form-control midwidth" id="pathway" name="pathway" required>
             </div>
@@ -110,13 +110,13 @@
             <div class="col-md-5">
                 <label for="numClasses" class="form-label">How many pathway classes have you taken?</label>
                 <input type="number" class="form-control numwidth" id="numClasses" name="numClasses" max=5 min=0 required>
-            </div>
+            </div> -->
 
             <div class="col-md-12">
                 <label for="why" class="form-label">Why would you like to join SJ Works?</label>
                 <textarea class="form-control" id="why" name="why" rows="3" required></textarea>
             </div>
-
+<!-- 
             <div class="col-md-6">
                 <label for="teacher" class="form-label">Teacher's Name</label>
                 <input type="text" class="form-control midwidth" id="teacher" name="teacher" required>
@@ -125,7 +125,7 @@
             <div class="col-md-6">
                 <label for="teacherEmail" class="form-label">Teacher's E-mail</label>
                 <input type="email" class="form-control midwidth" id="teacherEmail" name="teacherEmail" required>
-            </div>
+            </div> -->
 
             <button type="submit" class="btn btn-primary" id="submission" onclick="return confirm('Are you sure you wish to continue?')">Submit</button>
 
