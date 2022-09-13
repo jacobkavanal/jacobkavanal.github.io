@@ -113,6 +113,7 @@ p, .quote{
   margin: 50px;
   margin: auto;
   margin-top: 2vh;
+  margin-bottom: -30px;
 }
 
 /* Our Progress CSS */
