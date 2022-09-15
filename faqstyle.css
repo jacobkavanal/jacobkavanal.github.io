@@ -1,6 +1,6 @@
-body{
+/* body{
     background-color: #1A438B;
-}
+} */
 
 .sectionCard{
     background-color:  white;
@@ -17,7 +17,7 @@ body{
     font-size: min(8vw, 50px);
     padding-top: 5vh;
     padding-bottom: 1vh;
-    margin-left: 5vw;
+    margin-bottom: 5vh;
 }
 
 .accordion{
@@ -31,14 +31,14 @@ body{
 }
 
 .accordion-item{
-    margin-top: 1vh;
 
+    padding: 3px;
     
     border-bottom: solid 2px;
     border-top: solid 2px;
     border-left: none;
     border-right: none;
-    border-color: rgba(0,68,140, .5);
+    border-color: rgba(0,68,140, .2);
 }
 
 .accordion-header{
@@ -49,5 +49,14 @@ body{
 
 .accordion-button{
     background-color: white ;
-    color: #ffb703;
+    color: #1A438B;
+}
+
+.accordion-button:focus{
+    outline: none !important;
+    box-shadow: none;
+}
+
+.accordion-body{
+    font-family: 'Outfit', sans-serif;
 }
