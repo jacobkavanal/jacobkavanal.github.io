@@ -21,9 +21,11 @@
     border: none;
     transition: .4s;
     border-radius: 10px;
+
     margin: auto;
     margin-bottom: 1rem;
     margin-top: 1rem;
+    
     color: white;
 }
 
