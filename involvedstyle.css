@@ -2,6 +2,11 @@ body{
     background-color: #1A438B;
 }
 
+.top{
+  background-color: white;
+  padding-bottom: 5vh;
+}
+
 .title{
 
   background-color: WHITE;
@@ -29,7 +34,7 @@ body{
 }
 
 p, .quote{
-  color: #FEF9EF;
+  color: #1A438B;
   text-align: left;
   font-family: 'Outfit', sans-serif; 
   font-size: min(4.5vw, 20px);
@@ -40,7 +45,7 @@ p, .quote{
 
 .about{
 
-  color: #1A438B;
+  
   font-size: min(4vw, 15px);
   padding-left: 2vw;
   padding-right: 2vw;
