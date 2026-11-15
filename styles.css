@@ -72,3 +72,6 @@ summary{list-style:none;display:flex;align-items:center;gap:8px;width:fit-conten
 .details-mark{display:inline-block;width:8px;height:1px;background:currentColor;transform:rotate(0deg);transition:transform 180ms ease-out;flex:none}
 details[open]>summary .details-mark{transform:rotate(90deg)}
 @media(prefers-reduced-motion:reduce){.details-mark{transition:none}.project-github{transition:none;transform:none!important}}
+/* Ease the Details dash into and out of its open position. */
+.details-mark{transition:transform 240ms cubic-bezier(.22,1,.36,1)}
+@media(prefers-reduced-motion:reduce){.details-mark{transition:none}}
