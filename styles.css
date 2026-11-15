@@ -61,3 +61,5 @@ h1,h2,h3,p,.date,.role,.experience-label,.tools,.link-divider,summary,footer{tra
 @media(prefers-reduced-motion:reduce){body,.section-nav,h1,h2,h3,p,.date,.role,.experience-label,.tools,.link-divider,summary,footer,.experience-row,.project-row,.experience>h2,.work-section>h2{transition-duration:100ms}.theme-symbol{transition:none}.theme-toggle,.theme-toggle:active .theme-symbol{transform:none!important}}
 /* Straight text highlight */
 .intro h1::after{transform:none;border-radius:0;left:0;right:0}
+/* Full-height highlight with breathing room beside the name */
+.intro h1::after{left:-12px;right:-12px;top:0;bottom:0;height:auto}
