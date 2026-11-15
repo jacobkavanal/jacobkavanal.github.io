@@ -59,3 +59,5 @@ h1,h2,h3,p,.date,.role,.experience-label,.tools,.link-divider,summary,footer{tra
 .theme-toggle.magnetic-hover{--hover-angle:16deg;color:var(--accent);text-shadow:0 5px 12px rgb(90 54 54 / 14%)}
 .theme-toggle:active .theme-symbol{transform:rotate(calc(var(--theme-angle) + var(--hover-angle))) scale(.96)}
 @media(prefers-reduced-motion:reduce){body,.section-nav,h1,h2,h3,p,.date,.role,.experience-label,.tools,.link-divider,summary,footer,.experience-row,.project-row,.experience>h2,.work-section>h2{transition-duration:100ms}.theme-symbol{transition:none}.theme-toggle,.theme-toggle:active .theme-symbol{transform:none!important}}
+/* Straight text highlight */
+.intro h1::after{transform:none;border-radius:0;left:0;right:0}
