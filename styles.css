@@ -37,3 +37,16 @@ summary{transition:color 140ms ease-out}summary:hover{color:var(--ink)}
 /* Tighter titles and an unruled desktop section navigation */
 h1{letter-spacing:-1.7px}h2{letter-spacing:-1px}h3{letter-spacing:-.6px}.intro h1{letter-spacing:-2px}
 @media(min-width:761px){.section-nav{border-top:0;border-bottom:0}}
+/* Theme preference */
+:root{color-scheme:light}
+:root[data-theme="dark"]{color-scheme:dark;--paper:#191919;--ink:#eeeae4;--muted:#b1aaa2;--line:#363432;--accent:#cf9595}
+[data-theme="dark"] .intro>p,[data-theme="dark"] .experience-row>p:last-child,[data-theme="dark"] .project-row>p,[data-theme="dark"] .case-article p{color:#c4beb6}
+[data-theme="dark"] .role{color:#b1aaa2}[data-theme="dark"] .experience-label,[data-theme="dark"] summary,[data-theme="dark"] .experience-row h3 a span,[data-theme="dark"] .project-row h3 a span{color:var(--accent)}
+[data-theme="dark"] a:focus-visible,[data-theme="dark"] summary:focus-visible{outline-color:var(--accent);color:var(--accent)}
+[data-theme="dark"] summary:hover{color:var(--ink)}
+.theme-toggle{font:500 12pt var(--sans);display:flex;align-items:center;gap:8px;min-height:44px;background:none;border:0;padding:0;color:var(--muted);cursor:pointer;text-align:left;margin-top:8px}
+.theme-toggle[hidden]{display:none}.theme-toggle:hover,.theme-toggle:focus-visible{color:var(--accent)}.theme-toggle:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.theme-symbol{display:inline-block;font-size:21px;transition:transform 160ms ease-out}.theme-toggle:active .theme-symbol{transform:rotate(30deg) scale(.96)}
+.theme-changing::view-transition-old(root),.theme-changing::view-transition-new(root){animation:none;mix-blend-mode:normal}.theme-changing::view-transition-new(root){z-index:2}.theme-changing::view-transition-old(root){z-index:1}
+@media(max-width:1100px){.section-nav{align-items:center;gap:12px}.theme-toggle{margin:0}.theme-label{display:none}.theme-toggle{justify-content:center;min-width:44px}}
+@media(prefers-reduced-motion:reduce){.theme-symbol{transition:none}.theme-toggle:active .theme-symbol{transform:none}}
