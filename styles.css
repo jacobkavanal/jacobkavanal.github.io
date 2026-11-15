@@ -50,3 +50,12 @@ h1{letter-spacing:-1.7px}h2{letter-spacing:-1px}h3{letter-spacing:-.6px}.intro h
 .theme-changing::view-transition-old(root),.theme-changing::view-transition-new(root){animation:none;mix-blend-mode:normal}.theme-changing::view-transition-new(root){z-index:2}.theme-changing::view-transition-old(root){z-index:1}
 @media(max-width:1100px){.section-nav{align-items:center;gap:12px}.theme-toggle{margin:0}.theme-label{display:none}.theme-toggle{justify-content:center;min-width:44px}}
 @media(prefers-reduced-motion:reduce){.theme-symbol{transition:none}.theme-toggle:active .theme-symbol{transform:none}}
+/* Keep the toggle live while actual theme colors interpolate. */
+body,.section-nav{transition:background-color 280ms ease-out,color 280ms ease-out}
+h1,h2,h3,p,.date,.role,.experience-label,.tools,.link-divider,summary,footer{transition:color 280ms ease-out,border-color 280ms ease-out}
+.experience-row,.project-row,.experience>h2,.work-section>h2{transition:border-color 280ms ease-out}
+.theme-toggle{--theme-angle:0deg;--hover-angle:0deg;transition:color 160ms ease-out,text-shadow 160ms ease-out}
+.theme-symbol{transform:rotate(calc(var(--theme-angle) + var(--hover-angle)));transition:transform 280ms cubic-bezier(.2,0,0,1);transform-origin:center}
+.theme-toggle.magnetic-hover{--hover-angle:16deg;color:var(--accent);text-shadow:0 5px 12px rgb(90 54 54 / 14%)}
+.theme-toggle:active .theme-symbol{transform:rotate(calc(var(--theme-angle) + var(--hover-angle))) scale(.96)}
+@media(prefers-reduced-motion:reduce){body,.section-nav,h1,h2,h3,p,.date,.role,.experience-label,.tools,.link-divider,summary,footer,.experience-row,.project-row,.experience>h2,.work-section>h2{transition-duration:100ms}.theme-symbol{transition:none}.theme-toggle,.theme-toggle:active .theme-symbol{transform:none!important}}

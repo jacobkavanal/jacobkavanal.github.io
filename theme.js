@@ -1,8 +1,6 @@
 const root = document.documentElement;
 const toggle = document.querySelector('.theme-toggle');
 const system = matchMedia('(prefers-color-scheme: dark)');
-const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
-let transitioning = false;
 function applyTheme(theme) {
   root.dataset.theme = theme;
   const dark = theme === 'dark';
@@ -13,27 +11,14 @@ function applyTheme(theme) {
 }
 applyTheme(root.dataset.theme || (system.matches ? 'dark' : 'light'));
 toggle.hidden = false;
-toggle.addEventListener('click', async () => {
-  if (transitioning) return;
+let angle = root.dataset.theme === 'dark' ? 180 : 0;
+toggle.style.setProperty('--theme-angle', `${angle}deg`);
+toggle.addEventListener('click', () => {
   const theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
-  const update = () => {
-    applyTheme(theme);
-    try { localStorage.setItem('portfolio-theme', theme); } catch {}
-  };
-  if (!document.startViewTransition) { update(); return; }
-  transitioning = true;
-  root.classList.add('theme-changing');
-  const transition = document.startViewTransition(update);
-  try {
-    await transition.ready;
-    root.animate([{opacity:0},{opacity:1}], {
-      duration: reducedMotion.matches ? 100 : 280,
-      easing: 'ease-out',
-      pseudoElement: '::view-transition-new(root)',
-      fill: 'both'
-    });
-    await transition.finished;
-  } catch {} finally { root.classList.remove('theme-changing'); transitioning = false; }
+  angle += 180;
+  toggle.style.setProperty('--theme-angle', `${angle}deg`);
+  applyTheme(theme);
+  try { localStorage.setItem('portfolio-theme', theme); } catch {}
 });
 system.addEventListener('change', () => {
   try { if (localStorage.getItem('portfolio-theme')) return; } catch {}
