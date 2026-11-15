@@ -23,17 +23,15 @@ toggle.addEventListener('click', async () => {
   if (!document.startViewTransition) { update(); return; }
   transitioning = true;
   root.classList.add('theme-changing');
-  const rect = toggle.getBoundingClientRect();
-  const x = rect.left + rect.width / 2;
-  const y = rect.top + rect.height / 2;
-  const radius = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y));
   const transition = document.startViewTransition(update);
   try {
     await transition.ready;
-    root.animate(reducedMotion.matches ? [{opacity:0},{opacity:1}] : [
-      {clipPath:`circle(0px at ${x}px ${y}px)`},
-      {clipPath:`circle(${radius}px at ${x}px ${y}px)`}
-    ], {duration:reducedMotion.matches ? 100 : 280,easing:'cubic-bezier(0.2, 0, 0, 1)',pseudoElement:'::view-transition-new(root)',fill:'both'});
+    root.animate([{opacity:0},{opacity:1}], {
+      duration: reducedMotion.matches ? 100 : 280,
+      easing: 'ease-out',
+      pseudoElement: '::view-transition-new(root)',
+      fill: 'both'
+    });
     await transition.finished;
   } catch {} finally { root.classList.remove('theme-changing'); transitioning = false; }
 });
