@@ -65,3 +65,7 @@ h1,h2,h3,p,.date,.role,.experience-label,.tools,.link-divider,summary,footer{tra
 .intro h1::after{left:-12px;right:-12px;top:0;bottom:0;height:auto}
 /* Compact, slightly asymmetric name highlight */
 .intro h1::after{left:-3px;right:-7px;top:3px;bottom:3px}
+/* Match Cove Learning's body typography */
+@font-face{font-family:'DM Sans';src:url('assets/fonts/DMSans-Regular.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:'DM Sans';src:url('assets/fonts/DMSans-Italic.woff2') format('woff2');font-weight:100 900;font-style:italic;font-display:swap}
+:root{--sans:'DM Sans',Arial,sans-serif}
