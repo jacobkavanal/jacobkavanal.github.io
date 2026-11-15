@@ -1,6 +1,6 @@
 const reduced = matchMedia('(prefers-reduced-motion: reduce)');
 if (matchMedia('(hover: hover) and (pointer: fine)').matches) {
-  document.querySelectorAll('.links a, .section-nav a, .project-row h3 a, .experience-row h3 a, .project-links a, .theme-toggle').forEach((element) => {
+  document.querySelectorAll('.links a, .section-nav a, .project-row h3 a, .experience-row h3 a, .project-links a, .project-github, .theme-toggle').forEach((element) => {
     let frame = 0, x = 0, y = 0, targetX = 0, targetY = 0;
     let origin;
     const tick = () => {
